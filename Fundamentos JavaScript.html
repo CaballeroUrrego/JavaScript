@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fundamentos JavaScript</title>
+    <link rel="icon" href="/img/js.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/Fundamentos JavaScript.css" />
+  
+  </head>
+  <body>
+    <h1>Fundamentos JavaScript</h1>
+    <img
+      src="/img/programando.jpeg.jpg"
+      alt="Programando en JavaScript"
+      class="rounded"
+    />
+    <h2>Sebastian Urrego estuvo aquí.</h2>
+    <p>
+      Deje de declarar las variables con var ¿por que? ya no se usa y si tu
+      proyecto se vuelve mas grande, declarala con la palabra let
+    </p>
+
+    <p class="rojo">
+      Por que ya tenemos ámbitos de bloque y la podemos declarar con la palabra
+      let usar var es mala practica por que cuando la lógica se vuelve mas
+      completa utilizar variables globales te puede meter en un problema de
+      reasignación de valores.
+    </p>
+    <p>Abre la consola de tu navegador favorito</p>
+
+    <div class="button-container">
+      <a href="/html/basicos .html" target="_blank">
+        <button class="btn">Leccion 1</button>
+      </a>
+    </div>
+
+    <div class="button-container">
+      <a href="/html/cadena de texto.html" target="_blank">
+        <button class="btn">Leccion 2</button>
+      </a>
+    </div>
+
+
+    
+    <div class="button-container">
+      <a href="/html/Template Strings.html" target="_blank">
+        <button class="btn">Leccion 3</button>
+      </a>
+    </div>
+    <script>
+      // Ejemplo de declaración de variables
+      let hola = "Hola Caballero Urrego ";
+      let hello = "Hola Caballero Urrego con let😃👀👁️ ";
+      console.log(hola);
+      console.log(hello);
+      console.log(window);
+      console.log(window.hola);
+      console.log(window.hello);
+
+      // Ámbito de bloque
+      console.log("*******var mala practica por q se queda en el objeto window ********");
+      {
+        var musica = "Rock";
+        console.log("Variable Musica antes del Bloque", musica);
+        {
+          var musica = "pop";
+          console.log("Variable Musica dentro del Bloque", musica);
+        }
+        console.log("Variable Musica después del Bloque", musica);
+      }
+
+      // Comentarios
+      // Esto es un comentario de una línea
+      /* Esto 
+      es 
+      un 
+      comentario 
+      de 
+      varias
+      lineas */
+
+      // Uso de console.log
+      console.log("*******si creas uan con let no se va quedar en el objeto window q representa el objeto golobal del navegador ********");
+
+      // Uso de variables
+      let musica2 = "Rock";
+      console.log("Variable Musica antes del Bloque", musica2);
+      {
+        let musica2 = "pop";
+        console.log("Variable Musica dentro del Bloque", musica2);
+      }
+      console.log("Variable Musica después del Bloque", musica2);
+    </script>
+  </body>
+</html>

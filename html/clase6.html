@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/css/clase6.css" rel="stylesheet">
+        <link rel="icon" href="/img/js.png" type="image/x-icon" />
+    </head>
+    <body>
+        <h1>30/10/2024</h1>
+        <ul>
+            <li>primavera</li>
+            <li>verano</li>
+            <li>otoño</li>
+            <li>Invierno</li>
+        </ul>
+        <!-- Contenedor para la lista generada por JavaScript -->
+        <div id="lista-js"></div>
+        
+    </body>
+    <script>
+        // Concatenación de cadenas
+        let nombre = "Caballero";
+        let apellido = "Urrego.";
+        let saludo = "Hola a todos Soy";
+
+        console.log(saludo + " " + nombre + " " + apellido);
+
+        // Interpolación de variables
+        let saludo2 = `Hola mi nombre es ${nombre} y mi apellido es ${apellido}`;
+        console.log(saludo2);
+
+        // Crear la lista y mostrarla en el DOM
+        let ul = "<ul><li>primavera</li><li>verano</li><li>otoño</li><li>Invierno</li></ul>";
+        console.log(ul);
+
+        //Por si es muy compleja en la lista de doom
+let ul2     = `<ul>
+<li>primavera</li>
+<li>verano</li>
+<li>otoño</li>  
+<li>Invierno</li>
+</ul>`;
+console.log(ul2);
+        // Insertar la lista en el DOM
+        document.getElementById("lista-js").innerHTML = ul;
+    </script>
+</html>
