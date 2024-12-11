@@ -11,16 +11,23 @@
     <h1>Numeros</h1>
   
     <script>
-let a = 2;
-let b = new Number(1);
-let c =7.19;
-
-console.log(a, b);              // Salida: 2 [Number: 1]
-console.log(c.toFixed(1));       // Salida: "7.2"
-console.log(c.toFixed(5)); 
-
+      let a = 2;
+      let b = new Number(1);
+      let c = 7.19;
+      let d="5.6";// tipo de dato cadena 
+      
+      console.log(a, b);              // Output: 2 [Number: 1]
+      console.log(c.toFixed(1));       // Output: "7.2"
+      console.log(c.toFixed(5)); 
+      console.log(parseInt(c));
+      console.log(parseFloat(c)); 
+      console.log(typeof c,typeof d);
+      console.log(a+b);
+     // console.log(c+d);// en la consola concateno las cadenas
+      console.log(c+parseInt(d));//Solamente esta sumando solamente de la parte entera de d 
+      console.log(c+parseFloat(d));
 //esto sirve para mostrar numeros q tengan un cierto numero de decimales para mostrar 
-
+//parte debil si estas  usando numeros arimeticos 
 
     </script>
   </body>
