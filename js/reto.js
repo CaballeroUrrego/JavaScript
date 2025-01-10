@@ -1,4 +1,4 @@
-// Función caja negra que toma dos listas y realiza varias operaciones complejas
+// Función caja negra que toma dos 1w
 function procesarListas(lista1, lista2, umbral) {
     // 1. Concatenamos ambas listas y eliminamos elementos repetidos
     const listaCombinada = [...new Set([...lista1, ...lista2])];
