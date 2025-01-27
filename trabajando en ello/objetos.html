@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objetos</title>
+    <link href="/css/basicos.css" rel="stylesheet" />
+    <link rel="icon" href="/img/js.png" type="image/x-icon" />
+  </head>
+  <body>
+    <h1>Objetos en JavaScript</h1>
+    <button
+      onclick="window.location.href='https://www.youtube.com/watch?v=4xig5UPRC00&t=630s&ab_channel=jonmircha'"
+    >
+      Objetos en JavaScript
+    </button>
+    <script>
+      let a = new String("Hola");
+      //console.log(a);
+
+      const b = {};
+      console.log(b);
+
+      const c = new Object();
+      console.log(c);
+      const Sebas = {
+        nombre: "Sebastian",
+        apellido: "Urrego",
+        edad: 24,
+        pasatiempos: ["Programar", "Leer", "Escribir"],
+        soltero: true,
+        contacto: {
+          email: "urregosebastian462@gmail.com",
+          celular: "3023228386"
+        },
+        saludar: function () {
+          console.log(`holi`);
+        }
+      };
+      
+      console.log(Sebas);
+      
+
+
+    </script>
+  </body>
+</html>
