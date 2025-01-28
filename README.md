@@ -20,3 +20,6 @@ Adicionalmente a este repositorio por una pequeña aportación puedes acceder a:
 - El código _JavaScript_ que da solución a los ejercicios propuestos en el curso.
 
 23/10/24 Sebastian Estuvo aca 
+
+
+Retomando 27/01/2025 El caballero estuvo aqui 
