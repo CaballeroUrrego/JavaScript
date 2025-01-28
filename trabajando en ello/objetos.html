@@ -1,50 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Objetos</title>
-    <link href="/css/basicos.css" rel="stylesheet" />
-    <link rel="icon" href="/img/js.png" type="image/x-icon" />
-  </head>
-  <body>
-    <h1>Objetos en JavaScript</h1>
-    <button
-      onclick="window.location.href='https://www.youtube.com/watch?v=4xig5UPRC00&t=630s&ab_channel=jonmircha'"
-    >
-      Objetos en JavaScript
-    </button>
-    <script>
-      let a = new String("Hola");
-      //console.log(a);
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Objetos</title>
+  <link href="/css/basicos.css" rel="stylesheet" />
+  <link rel="icon" href="/img/js.png" type="image/x-icon" />
+</head>
+<body>
+  <h1>Objetos en JavaScript</h1>
+  <button
+    onclick="window.location.href='https://www.youtube.com/watch?v=4xig5UPRC00&t=630s&ab_channel=jonmircha'"
+  >
+    Objetos en JavaScript
+  </button>
 
-      const b = {};
-      console.log(b);
 
-      const c = new Object();
-      console.log(c);
-      /*dentro de un objeto a las variables se le van a llamar atributos/propiedades y a las 
-      funciones se les llama metodos*/
-      const Sebas = {
-        nombre: "Sebastian",
-        apellido: "Urrego",
-        edad: 24,
-        pasatiempos: ["Programar", "Leer", "Escribir"],
-        soltero: true,
-        contacto: {
-          email: "urregosebastian462@gmail.com",
-          celular: "3023228386"
-        },
-        saludar: function () {
-          console.log(`holi`);
-        }
-      };
-      
-      console.log(Sebas);
-      console.log(Sebas["nombre"]);
-      console.log(Sebas["apellido"]);
-console.log()
+  <button
+  onclick="window.location.href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects'"
+>
+Working with objects-Trabajando con Objetos
+</button>
 
-    </script>
-  </body>
+
+  <script>
+
+
+
+    
+    let a = new String("Hola");
+    //console.log(a);
+
+    const b = {};
+    console.log(b);
+
+    const c = new Object();
+    console.log(c);
+    /*dentro de un objeto a las variables se le van a llamar atributos/propiedades y a las 
+    funciones se les llama metodos*/
+    const Sebas = {
+      nombre: "Sebastian",
+      apellido: "Urrego",
+      edad: 24,
+      pasatiempos: ["leer", "Programar en Javascrip", "Escribir"],
+      soltero: true,
+      contacto: {
+        email: "urregosebastian462@gmail.com",
+        celular: "3023228386"
+      },
+      saludar: function () {
+        console.log(`Buenas tardes`);
+      },
+      decirMinombre:function(){
+        console.log(`Hola mi nombre es ${this.nombre} ${this.apellido} y tengo ${this.edad} años`);
+      }
+    };
+    /* En javacrip todo es un Objeto*/
+    console.log(Sebas);
+    console.log(Sebas["nombre"]);
+    console.log(Sebas["apellido"]);
+    console.log(Sebas.nombre);
+    console.log(Sebas.pasatiempos);
+    console.log(Sebas.pasatiempos[1]);
+    Sebas.saludar(); 
+    Sebas.decirMinombre();
+
+    
+    console.log(Object.keys(Sebas));/*me permite listar la lista del objeto*/
+    console.log(Object.values(Sebas));/*me va a formar un arrego pero enves de las llaves me da los valores */
+    console.log(Sebas.hasOwnProperty("nombre"));/*me dice si la propiedad existe o no*/
+
+
+  </script>
+</body>
 </html>
