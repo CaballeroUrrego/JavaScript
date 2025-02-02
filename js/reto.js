@@ -1,35 +1,52 @@
 // Función caja negra que toma dos 1w
 function procesarListas(lista1, lista2, umbral) {
-    // 1. Concatenamos ambas listas y eliminamos elementos repetidos
-    const listaCombinada = [...new Set([...lista1, ...lista2])];
-    
-    // 2. Filtramos la lista para incluir solo números primos mayores al umbral
-    const listaPrimos = listaCombinada.filter(num => 
-        num > umbral && 
-        num % 2 !== 0 && 
-        Array.from({length: Math.floor(Math.sqrt(num)) + 1}, (_, i) => i * 2 + 1).includes(num)
-    );
+  // 1. Concatenamos ambas listas y eliminamos elementos repetidos
+  const listaCombinada = [...new Set([...lista1, ...lista2])];
 
-    // 3. Agrupamos los números por su paridad y calculamos el promedio de cada grupo
-    const gruposParidad = listaPrimos.reduce((acc, num) => {
-        acc[num % 2 === 0 ? 'pares' : 'impares'] = 
-            (acc[num % 2 === 0 ? 'pares' : 'impares'] || []).concat(num);
-        return acc;
-    }, {});
+  // 2. Filtramos la lista para incluir solo números primos mayores al umbral
+  const listaPrimos = listaCombinada.filter(
+    num =>
+      num > umbral &&
+      num % 2 !== 0 &&
+      Array.from(
+        { length: Math.floor(Math.sqrt(num)) + 1 },
+        (_, i) => i * 2 + 1
+      ).includes(num)
+  );
 
-    // 4. Calculamos el área de un triángulo equilátero formado por tres números primos consecutivos
-    const areaTrianguloEquilatero = calcularAreaTrianguloEquilatero(gruposParidad['impares']);
+  // 3. Agrupamos los números por su paridad y calculamos el promedio de cada grupo
+  const gruposParidad = listaPrimos.reduce((acc, num) => {
+    acc[num % 2 === 0 ? "pares" : "impares"] = (acc[
+      num % 2 === 0 ? "pares" : "impares"
+    ] || [])
+      .concat(num);
+    return acc;
+  }, {});
 
-    // 5. Ordenamos la lista final basándonos en el área del triángulo equilátero
-    return listaPrimos.sort((a, b) => calcularAreaTrianguloEquilatero([a, b]).area - calcularAreaTrianguloEquilatero([b, a]).area);
+  // 4. Calculamos el área de un triángulo equilátero formado por tres números primos consecutivos
+  const areaTrianguloEquilatero = calcularAreaTrianguloEquilatero(
+    gruposParidad["impares"]
+  );
+
+  // 5. Ordenamos la lista final basándonos en el área del triángulo equilátero
+  return listaPrimos.sort(
+    (a, b) =>
+      calcularAreaTrianguloEquilatero([a, b]).area -
+      calcularAreaTrianguloEquilatero([b, a]).area
+  );
 }
 
 // Función auxiliar para calcular el área de un triángulo equilátero
 function calcularAreaTrianguloEquilatero(numeros) {
-    if (numeros.length < 3) return { area: 0 };
-    const a = numeros[0], b = numeros[1], c = numeros[2];
-    const s = (a + b + c) / 2;
-    return { area: Math.sqrt(s * (s - a) * (s - b) * (s - c)), altura: Math.sqrt(3) / 2 * a };
+  if (numeros.length < 3) return { area: 0 };
+  const a = numeros[0],
+    b = numeros[1],
+    c = numeros[2];
+  const s = (a + b + c) / 2;
+  return {
+    area: Math.sqrt(s * (s - a) * (s - b) * (s - c)),
+    altura: Math.sqrt(3) / 2 * a
+  };
 }
 
 // Listas de entrada

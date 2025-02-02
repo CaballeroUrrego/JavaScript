@@ -1,0 +1,72 @@
+/* Estilos básicos para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+/* Estilos para el encabezado */
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-top: 20px;
+    font-size: 2.5em;
+}
+
+/* Estilos para los párrafos */
+p {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 10px 20px;
+}
+
+/* Estilos para la imagen */
+img {
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+}
+
+/* Estilos para el botón */
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para el botón de modo oscuro */
+#toggle-dark-mode {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggle-dark-mode:hover {
+    background-color: #45a049;
+}
