@@ -1,4 +1,4 @@
-// Función caja negra que toma dos 1w
+// Función caja negra que toma dos listas y un umbral
 function procesarListas(lista1, lista2, umbral) {
   // 1. Concatenamos ambas listas y eliminamos elementos repetidos
   const listaCombinada = [...new Set([...lista1, ...lista2])];
@@ -14,7 +14,7 @@ function procesarListas(lista1, lista2, umbral) {
       ).includes(num)
   );
 
-  // 3. Agrupamos los números por su paridad y calculamos el promedio de cada grupo
+  // 3. Agrupamos los números por su paridad (pares e impares)
   const gruposParidad = listaPrimos.reduce((acc, num) => {
     acc[num % 2 === 0 ? "pares" : "impares"] = (acc[
       num % 2 === 0 ? "pares" : "impares"
@@ -38,11 +38,14 @@ function procesarListas(lista1, lista2, umbral) {
 
 // Función auxiliar para calcular el área de un triángulo equilátero
 function calcularAreaTrianguloEquilatero(numeros) {
+  // Si hay menos de 3 números, el área es 0
   if (numeros.length < 3) return { area: 0 };
   const a = numeros[0],
     b = numeros[1],
     c = numeros[2];
+  // Calculamos el semiperímetro
   const s = (a + b + c) / 2;
+  // Devolvemos el área y la altura del triángulo
   return {
     area: Math.sqrt(s * (s - a) * (s - b) * (s - c)),
     altura: Math.sqrt(3) / 2 * a
